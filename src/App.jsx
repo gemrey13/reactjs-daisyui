@@ -2,9 +2,9 @@ import { useState, useEffect } from "react";
 
 
 const Navbar = () => {
-  // use theme from local storage if available or set light theme
+  // use theme from local storage if available or set lemonade theme
   const [theme, setTheme] = useState(
-    localStorage.getItem("theme") ? localStorage.getItem("theme") : "light"
+    localStorage.getItem("theme") ? localStorage.getItem("theme") : "lemonade"
   );
 
   // update state on toggle 
@@ -12,7 +12,7 @@ const Navbar = () => {
     if (e.target.checked) {
       setTheme("night");
     } else {
-      setTheme("light");
+      setTheme("lemonade");
     }
   };
 
@@ -38,10 +38,10 @@ const Navbar = () => {
               type="checkbox"
               onChange={handleToggle}
               // show toggle image based on localstorage theme
-              checked={theme === "light" ? false : true}
+              checked={theme === "lemonade" ? false : true}
             />
-            {/* light theme sun image */}
-            <img alt="light" className="w-8 h-8 swap-on" />
+            {/* lemonade theme sun image */}
+            <img alt="lemonade" className="w-8 h-8 swap-on" />
             {/* night theme moon image */}
             <img alt="night" className="w-8 h-8 swap-off" />
           </label>
