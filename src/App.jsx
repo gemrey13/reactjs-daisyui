@@ -7,7 +7,7 @@ const Navbar = () => {
     localStorage.getItem("theme") ? localStorage.getItem("theme") : "light"
   );
 
-  // update state on toggle
+  // update state on toggle 
   const handleToggle = (e) => {
     if (e.target.checked) {
       setTheme("night");
